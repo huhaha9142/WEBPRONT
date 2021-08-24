@@ -66,9 +66,22 @@
             font-size: 1.1em; /* 110% 와 동일 */
           }
 
+          .beverage {
+            /* padding: 컨텐츠 내부 영역 */
+            /* 값이 1개: 위, 오른쪽, 아래, 왼쪽에 공백 */
+            padding: 10px;
+          }
+
           .beverage h2 {
             font-size: 1.5em;
             /* 1.5em = 150% = 24px */
+            /* 특정 영역에 공백 추가 : 접미사 */
+            margin-bottom: 20px;
+          }
+
+          .menu {
+            /* 값이 2개: 위-아래 , 오른쪽-왼쪽  */
+            margin: 10px, 0;
           }
 
           /* 구조 선택자 */
@@ -94,6 +107,29 @@
             /* class=feature */
             /* text-decoration 속성: 줄로 꾸미기 */
             text-decoration: underline;
+          }
+
+          .seller img {
+            /* 공간 점유 방식을 변경 
+                none: 공간 점유를 하지 않는다 
+                block: 공간 점유 방식을 block으로
+                inline: 공간 점유 방식을 inline으로 표시 */
+                /* display: none; */
+                /* visibility 속성:  
+                    visible: 표시
+                    hidden: 표시하지 않음 (공간은 점유) */
+                /* visibility: hidden; */
+          }
+
+
+          /* background: 배경을 설정하는 속성 */
+          body {
+            background-image: url("./image/Landscape.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: bottom;
+            background-size: 100%;
+
           }
       </style>
     </head>
