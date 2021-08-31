@@ -29,7 +29,7 @@ console.log("-------------- Casting: 타입 변환");
 //  중간에 데이터 타입이 변경될 수 있다 -> 형변환이 필요한 경우 많다
 //  parse 계열: parseInt, parseFloat
 console.log("011", parseInt("011"));
-// console.log(typeof "011", typeof parseInt("011"));   --> "011" : String , parseInt("011") : number
+//  console.log(typeof "011", typeof parseInt("011"));  // --> "011" : String , parseInt("011") : number
 console.log("011", parseInt("011", 2)) //  2진수 011을 변환
 console.log("0xFF", parseInt("0xFF", 16))  //  16진수 FF를 변환
 // console.log(typeof "0xFF", typeof parseInt("0xFF"));  --> "0xFF" : String, parseInt("0xFF, 16") : number 16진수 변환
@@ -57,4 +57,4 @@ console.log(v + 2021);  //  Infinity + 2021 -> Infinity
 //  유한수치인지 확인 isFinite 함수
 console.log("1/0 is Finite?", isFinite(1/0));
 console.log("2021 is Finite?", isFinite(2021));
-console.log("NaN is Finite", isFinite(parseInt("abc123")));
+console.log("NaN is Finite", isFinite(parseInt("abc123"))); 

@@ -24,6 +24,7 @@ console.log(s1, ", length=", s1.length);
 let position = s1.indexOf("Java");  //  처음부터 Java를 검색
 console.log("1st Java:", position);
 position += "JavaScript" .length;   //  검색 시작 위치 변경
+console.log(position);
 position = s1.indexOf("Java", position);    //  검색 범위 제한
 console.log("2nd Java:", position);
 position += "Java".length;  //  검색 시작 위치 변경
@@ -37,6 +38,8 @@ console.log("원본:", s1);
 
 //  좌우 화이트 스페이스 제거: trim
 console.log("               Hello               ".trim());  //  좌우의 화이트 스페이스를 제거
+const s = "           Hello    ";
+console.log(s.trim());                              //  위와 동일
 
 //  ---------------- String 보충
 //  ", ' : 어떤 것을 사용해도 무방
@@ -65,6 +68,9 @@ console.log("템플릿 문자열 :", message);
 message = "예전에는 여러 줄 문자열을 만드는 게\n쉽지 않았습니다.";
 console.log(message);
 
+//  기존 방식
+message = "하지만 ES6에서는\n아주 손쉽게\n여러 줄 문자열을     만들 수 있습니다.";
+console.log(message);
 //  템플릿 스트링
 message = `
 하지만 ES6에서는
