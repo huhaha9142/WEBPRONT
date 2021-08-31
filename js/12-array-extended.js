@@ -53,4 +53,46 @@ function testEvery() {
 
     console.log("------------ every: age > 50 ?", result);
 }
-testEvery();
+// testEvery();
+
+function testFilter() {
+    console.log("---------------- Filter");
+
+    let source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    //  source에서 짝수 요소만 필터링 해 보자
+
+    // 기존 방식
+    let result = [];
+    for (let i = 0; i < source.length; i++) {
+        //  판별
+        if (source[i] % 2 == 0) {
+            result.push(source[i]);
+        }
+    }
+    console.log("원본:", source);
+    console.log("짝수 필터링:", result);
+
+    //  filter 방식
+    result = source.filter( item => item % 2 == 0); //  기존 방식보다 간편하게
+    console.log("짝수 필터링(filter):", result);
+}
+// testFilter();
+
+function testMap() {
+    console.log("-------------- map");
+    let source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log("원본:", source);
+
+    // 모든 요소를 *2 한 새 배열을 만들어라
+    // 기존 방식
+    let multiply = [];
+    for (let i = 0; i < source.length; i++) {
+        multiply.push(source[i] * 2);
+    }
+    console.log("요소 계산:", multiply);
+
+    //  map 함수 활용
+    multiply = source.map(item => item * 2);
+    console.log("배열 곱셈(map):", multiply);
+}
+testMap();

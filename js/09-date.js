@@ -16,4 +16,4 @@ console.log("요일:", time.getDay());        //  일요일: 0
 time.setFullYear(2021);
 console.log("변경된 time:", time);
 //  이 날은 무슨 요일?
-console.log("요일:", time.getDay());
+console.log("요일:", time.getDay());    
