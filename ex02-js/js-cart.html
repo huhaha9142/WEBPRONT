@@ -65,7 +65,10 @@
 
 
                 //  트리에 추가
-                container.appendChild(itemNode);
+                let firstItem = container.children[0];  
+                //  기준이 되는 노드 
+                container.insertBefore(itemNode, firstItem);
+                // container.appendChild(itemNode);
             }
 
             itemInput.value = "";
