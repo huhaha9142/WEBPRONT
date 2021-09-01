@@ -46,10 +46,22 @@
             anim id est laborum.</p>
         <h3>Products</h3>
         <ul id="product-list">
-            <li><img class="sub-image" src="./images/iphone-xs.jpeg" title="iPhone XS"></li>
-            <li><img class="sub-image" src="./images/iphone-xr.jpeg" title="iPhone XR"></li>
-            <li><img class="sub-image" src="./images/iphone8.jpeg" title="iPhone 8"></li>
-            <li><img class="sub-image" src="./images/ipad-mini.jpeg" title="iPad Mini"></li>
+            <li><img class="sub-image" 
+                src="./images/iphone-xs.jpeg" 
+                title="iPhone XS"
+                data-color="red"></li>
+            <li><img class="sub-image" 
+                src="./images/iphone-xr.jpeg" 
+                title="iPhone XR"
+                data-color="green"></li>
+            <li><img class="sub-image" 
+                src="./images/iphone8.jpeg" 
+                title="iPhone 8"
+                data-color="blue"></li>
+            <li><img class="sub-image" 
+                src="./images/ipad-mini.jpeg" 
+                title="iPad Mini"
+                data-color="purple"></li>
         </ul>
         <input type="text" id="keyword" /><button id="btn-search">검색</button>
     </div>
@@ -97,7 +109,7 @@
     }
 
     //  이벤트 리스너 부착: 가장 추천하는 방식
-    window.addEventListener("local", function(event) {
+    window.addEventListener("load", function(event) {
         //  load 이벤트 -> 페이지 초기화를 주로 담당
         //  키보드 이벤트
         document.getElementById("keyword")
@@ -111,28 +123,27 @@
             btn.innerText = event.target.value + "검색";
     }
 
-       
-    // class가 sub-image인 모든 요소들 검색
-    let products =
-        document.getElementsByClassName("sub-image");
-    console.log(products);
-    for (let i = 0; i < products.length; i++) {
-        //  개별 상품들 요소 확인
-        let product = products[i];
-        console.log(product);
+        //  class가 sub-image인 모든 요소들 검색
+        let products = 
+            document.getElementsByClassName("sub-image");
+        console.log(products);
+        for (let i = 0; i < products.length; i++) {
+            //  개별 상품들 요소 확인
+            let product = products[i];
+            console.log(product);
 
-        //  이벤트 리스너 부착
-        product.addEventListener("click", function(event) {
-            //  이벤트 발생 객체 검색
-            let obj = event.target;
-            let mainImage = document.getElementById("main-image");
-            mainImage.setAttribute("src", obj.getAttribute("src"));
-            mainImage.setAttribute("title", obj.getAttribute("title"));
+            //  이벤트 리스너 부착
+            product.addEventListener("click", function(event) {
+                //  이벤트 발생 객체 검색
+                let obj = event.target;
+                let mainImage = document.getElementById("main-image");
+                mainImage.setAttribute("src", obj.getAttribute("src"));
+                mainImage.setAttribute("title", obj.getAttribute("title"));
 
-            let title = document.querySelector("#product-info h2");
-            title.innerText = obj.getAttribute("title");
-        })
-    }
+                let title = document.querySelector("#product-info h2");
+                title.innerText = obj.getAttribute("title");
+            })
+        }
     });
 </script>
 </html>
