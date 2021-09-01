@@ -123,27 +123,32 @@
             btn.innerText = event.target.value + "검색";
     }
 
-        //  class가 sub-image인 모든 요소들 검색
-        let products = 
-            document.getElementsByClassName("sub-image");
-        console.log(products);
-        for (let i = 0; i < products.length; i++) {
-            //  개별 상품들 요소 확인
-            let product = products[i];
-            console.log(product);
+       
+    // class가 sub-image인 모든 요소들 검색
+    let products =
+        document.getElementsByClassName("sub-image");
+    console.log(products);
+    for (let i = 0; i < products.length; i++) {
+        //  개별 상품들 요소 확인
+        let product = products[i];
+        console.log(product);
 
-            //  이벤트 리스너 부착
-            product.addEventListener("click", function(event) {
-                //  이벤트 발생 객체 검색
-                let obj = event.target;
-                let mainImage = document.getElementById("main-image");
-                mainImage.setAttribute("src", obj.getAttribute("src"));
-                mainImage.setAttribute("title", obj.getAttribute("title"));
+        //  이벤트 리스너 부착
+        product.addEventListener("click", function(event) {
+            //  이벤트 발생 객체 검색
+            let obj = event.target;
+            let mainImage = document.getElementById("main-image");
+            // mainImage.setAttribute("src", obj.getAttribute("src"));
+            mainImage['src'] = obj['src'];
+            // mainImage.setAttribute("title", obj.getAttribute("title"));
+            mainImage['title'] = obj['title'];
 
-                let title = document.querySelector("#product-info h2");
-                title.innerText = obj.getAttribute("title");
-            })
-        }
+            let title = document.querySelector("#product-info h2");
+            title.innerText = obj.getAttribute("title");
+            //  스타일 속성 사용
+            title.style.backgroundColor = obj.getAttribute("data-color");
+        })
+    }
     });
 </script>
 </html>
