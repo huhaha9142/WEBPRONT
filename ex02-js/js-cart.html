@@ -38,21 +38,21 @@
                 //  새 노드를 생성
                 //  ul#list에 자식으로 추가
                 //  부모 찾기
-                let containder = document.getElementById("list");
-                //  li 노트 생성
+                let container = document.getElementById("list");
+                //  li 노드 생성
                 let itemNode = document.createElement("li");
                 //  속성과 콘텐츠 설정
                 itemNode.innerHTML = item;
                 //  트리에 추가
                 container.appendChild(itemNode);
-                
             }
 
             itemInput.value = "";
             itemInput.focus();
         }
+
         window.addEventListener("load", function(event) {
-            //  추가 버튼을 눌렸을 때의 이벤트 연결
+            //  추가 버튼을 눌렀을 때의 이벤트 연결
             document.getElementById("btn-add")
                 .addEventListener("click", addItem);
         })
