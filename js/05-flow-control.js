@@ -4,24 +4,28 @@ console.log("-----for 문---------");
 // 2단 부터 9단 까지
 // (for 문, while 문)
 
-for (i = 2; i<=9; i++) {
-    for (j = 1; j<=9; j++) {
-        console.log("%d x %d =", i, j,  i*j );
+for (let dan = 2; dan < 10; dan++) {
+    for (let num = 1; num < 10; num++){
+        console.log(`${dan} * ${num} = ${dan * num}`);
     }
-    
+    console.log();
 }
 
 console.log("-----while 문-------");
 
-i = 2;
-j = 1;
+let dan = 2;
+while (dan < 10) {
+    num = 1;
+    while (num <10) {
+        console.log(`${dan} * ${num} = ${dan * num}`);
+        num++;
+    }
+    console.log();
+    dan++;
 
-while (i<=9) {
-    for (j=1; j<=9; j++) {
-        console.log("%d x %d =", i, j, i*j);
-     }
-    i++;
 }
+
+
 
 console.log("--------------------");
 
@@ -34,9 +38,15 @@ console.log("-----연습문제 2-----");
 //  **
 //  *
 //  (for 문, while 문)
-// for (i=1; i<=5; i++) {
-//     console.log("*****")
-// }
+
+console.log("-----------for문 star --------");
+for (let i = 5; i >= 1; i--) {
+    let stars = "";
+    for (let j = 1; j <= i; j++) {
+
+    }
+    
+}
 
 
 

@@ -15,7 +15,7 @@ console.log(v2, typeof v2, v2 == undefined);    // undefined 체크
 
 //  == : 타입(type)과 관계 없이 값(literal)을 비교
 //  === : 값과 함께 타입도 비교
-console.log(2021 == "2021");    //  값만 비교
+console.log(2021 == "2021");    //  값만 비교   2021 -> number / "2021" -> String
 console.log(2021 === "2021");   //  값과 타입 비교
 
 //  JavaScript는 number, string이 비어있으면 false
@@ -24,9 +24,11 @@ console.log("문자열:", Boolean("String"), Boolean(""));
 console.log("수치형:", Boolean(2021), Boolean(0));
 
 let content = "CONTENTS";
+console.log(typeof content);   //  String타입
 
 console.log(true && content);   //    -> CONTENTS 선택
 console.log(false && content);  //   -> false
 
 console.log(true || content);   //    -> true
+console.log(content || true);   //    -> content
 console.log(false || content);  //    -> CONTENTS 선택
