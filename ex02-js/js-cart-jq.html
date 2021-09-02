@@ -36,7 +36,7 @@
             // let itemInput = document.getElementById("item");
             // let item = itemInput.value.trim();
             let itemInput = $("#item");
-            let item = itmeInput.val();
+            let item = itemInput.val();
 
             if (item.length > 0) {
                 //  새 노드를 생성
@@ -50,10 +50,11 @@
                 //  속성과 콘텐츠 설정
                 // itemNode.innerHTML = item;
                 itemNode.html(item);
-                
+
                 // let toolbar = document.createElement("div");
                 // toolbar.style.display = "inline";
                 let toolbar = $("<div>").css("display", "inline");
+
                 // let delBtn = document.createElement("button");
                 // delBtn.innerText = "삭제";
                 // delBtn.style.cssFloat = "right";
@@ -76,13 +77,12 @@
 
                 // toolbar.appendChild(delBtn);
                 // itemNode.appendChild(toolbar);
-                toobar.append(delBtn);
+                toolbar.append(delBtn);
                 itemNode.append(toolbar);
-
 
                 //  트리에 추가
                 // let firstItem = container.children[0];  
-                //  기준이 되는 노드 
+                //  기준이 되는 노드
                 // container.insertBefore(itemNode, firstItem);
                 // container.appendChild(itemNode);
                 itemNode.appendTo(container);
@@ -108,6 +108,7 @@
             let items = $("#list > li");
             items.each(function(index, item) {
                 item.remove();
-        });
+            });
+        })
     </script>
-</html>
+</html> 
