@@ -57,9 +57,11 @@ for (let i = 5; i >= 1; i--) {
 //          순회 객체의 값을 순회
 let obj = {         // <--- 자바스크립트 객체 표기법
     name: "박상혁",
+    gender: "남성",
     age: 32,
-    job: "학생",
-    gender: "남성"
+    job: "학생"
+    
+    
 }
 console.log("===== for ... in");
 
@@ -68,9 +70,9 @@ for (let key in obj) {
     console.log(key, "->", obj[key]);
 }
 
-const arr = [5, 1, 4, 3, 2, 9, 8, 0];
+const arr = [5, 10, 1, 4, 3, 2, 9, 8, 0];
 for (let key in arr) {
-    console.log(key); //    -> 0 1 2 3 4 5 6 7
+    console.log(key); //    -> 0 1 2 3 4 5 6 7 8
 }
     console.log();
 
